@@ -17,8 +17,25 @@ heroku config:set NEW_RELIC_APP_NAME="NAME"
 heroku config:set TZ="heroku"
 ```
 
+## Local server
+
+Prerequisite (do these once only):
+
+```bash
+virtualenv env
+. env/bin/activate
+pip install -r requirements.txt  # rerun if updated
+```
+
+Run local server:
+
+```bash
+. env/bin/activate
+source .env.source
+foreman start web -f Procfile.local
+```
+
 ## TODO
 
 - Worker is not finished
 - console app
-- local server instructions
