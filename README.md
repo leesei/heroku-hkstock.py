@@ -3,7 +3,7 @@ Heroku app: heroku-hkstock (python)
 
 Service that parse stock quotes from website to JSON.
 
-This app is *OBSOLETED* for the Node.js version.  
+This app is *DEPRECATED* by the [Node.js version](https://github.com/leesei/heroku-hkstock).  
 It now serves as a scraper reference for the various websites.
 
 ## Usage
