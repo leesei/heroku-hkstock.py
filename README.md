@@ -20,11 +20,11 @@ heroku config:set TZ="heroku"
 
 ## Endpoints
 
-* /
+* /  
   Test Redis usage and timezone
-* /debug
+* /debug  
   List scrapers
-* /rtq?symbol=_symbol_[&src=_scraper_]
+* /rtq?symbol=_symbol_[&src=_scraper_]  
   Quote service
 
 ## Local server
