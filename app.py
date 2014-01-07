@@ -43,7 +43,7 @@ def env(request):
 def debug(request):
     response = webapp2.Response()
     response.headers['Content-Type'] = 'text/plain; charset=utf-8'
-    response.out.write(pyclbr.readmodule('providers').keys())
+    response.out.write(pyclbr.readmodule('quote_providers').keys())
     return response
 
 
@@ -83,9 +83,9 @@ class StockQuote(webapp2.RequestHandler):
         if not symbol:
             return
 
-        provider = self.request.get('src', 'aamobile')
         provider = quote_providers.LUT.get(
-            rovider, quote_providers.DEFAULT_PROVIDER)
+            self.request.get('src', 'aamobile'),
+            quote_providers.DEFAULT_PROVIDER)
 
         self.response.out.write(provider.quote(symbol).toJSON())
         return
