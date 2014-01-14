@@ -49,5 +49,6 @@ foreman start web -f Procfile.local
 
 ## TODO
 
-- Worker is not finished
+- Worker is not finished (Worker act as backend to scrape and push results to redis)
+- multiple request handlers (using `unicorn`?)
 - console app
